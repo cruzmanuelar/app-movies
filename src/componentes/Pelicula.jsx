@@ -18,7 +18,6 @@ const Pelicula = () => {
         setPelicula(data);
     }
 
-
     useEffect(() => {
 
         getPelicula();
@@ -30,7 +29,7 @@ const Pelicula = () => {
 
 
             {pelicula?
-                <div className='w-1/1 md:w-4/5 bg-[#3f3f46] bg-opacity-30 mx-2 rounded-md'>
+                <div className='w-1/1 md:w-4/5 bg-[#18181b] mx-2 rounded-md text-white'>
 
                         <div className='flex flex-col md:flex-row p-2 my-auto'>
 
@@ -46,7 +45,7 @@ const Pelicula = () => {
                                     <AiFillStar className='inline-block' size={20} color='yellow'/>{' '} {pelicula.rating.average}/10
                                 </div>
                                 <p className='text-justify my-2'>
-                                    <strong>Resume: </strong>{pelicula.summary.replace('<b>','').replace('</b>','').replace('<p>','').replace('</p>','').replace('</i>','').replace('<i>','')}
+                                    <strong>Resume: </strong>{pelicula.summary.replaceAll('<b>','').replaceAll('</b>','').replaceAll('</p>','').replaceAll('<i>','').replaceAll('</i>','').replaceAll('<p>','')}
                                     
                                 </p>
 
@@ -54,9 +53,8 @@ const Pelicula = () => {
                                     <p>{pelicula.genres.map(gn=> <span key={gn} className='rounded-full mr-1 px-2 text-sm text-white bg-blue-600'>{gn}</span>)}</p>
                                 </div>
 
-                                <div className='flex text-left items-center my-2'>
-                                    <AiFillCalendar className='inline-block mr-1' color='black' size={20}/>{pelicula.premiered}
-                                    
+                                <div className='flex text-left items-center mt-2 mb-1'>
+                                    <AiFillCalendar className='inline-block mr-1' color='white' size={20}/>{pelicula.premiered}
                                     
                                 </div>
                                 
@@ -65,7 +63,7 @@ const Pelicula = () => {
                                     :
                                     <BsCircleFill  color='red' className='bg-[white] p-1 rounded-sm inline-block'/>
                                 }</p>
-                                <div className='my-1 flex items-center select-none'><MdAccessTimeFilled className='inline-block mr-1'/>{pelicula.averageRuntime} min</div>
+                                <div className='my-1 flex items-center select-none'><MdAccessTimeFilled className='inline-block mr-1'/>{pelicula.averageRuntime} min (Average time per episode)</div>
                                 
                             </div>
                         </div>
