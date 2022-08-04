@@ -43,7 +43,7 @@ function App() {
         <Route path="movie/:id" element={<Pelicula/>} />
       </Routes>
 
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }
