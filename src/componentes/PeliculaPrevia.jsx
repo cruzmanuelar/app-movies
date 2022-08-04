@@ -8,7 +8,7 @@ const PeliculaPrevia = ({mov}) => {
   return (
         <div className='flex flex-col justify-center mx-3 my-2 md:hover:my-0 hover:my-2 relative hover:scale-105 duration-200 z-10' key={mov.id}>
 
-            <div className='text-center rounded-t-sm bg-[#18181b] text-white' style={{fontSize:'1vw'}} >
+            <div className='text-center rounded-t-sm bg-[#18181b] text-white' >
                 {mov.premiered.slice(0,4)}
             </div>
 
@@ -16,7 +16,7 @@ const PeliculaPrevia = ({mov}) => {
 
             <div className='text-sm text-center rounded-b-md bg-[#52525b] text-white hover:bg-[#18181b]'>
 
-                <div className='' style={{fontSize:'1vw'}}>
+                <div>
                     <p className='font-semibold my-1 h-10'>{mov.name}</p>
                 </div>
 
