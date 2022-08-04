@@ -26,13 +26,12 @@ const Pelicula = () => {
     },[])
 
     return (
-        <div className='p-3 w-full flex justify-center'>
+        <div className='py-3 w-full flex justify-center'>
 
 
             {pelicula?
-                <div className='w-4/5 bg-[#64748b] bg-opacity-30 mx-2 rounded-md'>
+                <div className='w-1/1 md:w-4/5 bg-[#3f3f46] bg-opacity-30 mx-2 rounded-md'>
 
-                        
                         <div className='flex flex-col md:flex-row p-2 my-auto'>
 
                             <h2 className='text-center font-semibold text-3xl my-2 md:text-left md:hidden'>{pelicula.name}</h2>
@@ -73,10 +72,12 @@ const Pelicula = () => {
                         
                     </div>:<p>Nada</p>}
 
-
-            <div className='hidden md:flex md:w-1/5'>
-                Las sugeridas
+            <div className='hidden md:flex md:w-1/5 justify-center'>
+                <h3 className=''>Sugeridas</h3>
             </div>
+            {/* <div className='hidden md:flex md:w-1/5'>
+                Las sugeridas
+            </div> */}
         </div>
     )
 }

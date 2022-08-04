@@ -10,11 +10,11 @@ const Romance = ({peliculas, genero}) => {
 
 
   return (
-    <div className='bg-[#e0f2fe] h-100'>
+    <div className='h-100'>
 
       <Encabezado genero='Romance' nombreGenero={nombreGenero} />
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 mx-4 bg-[#e0f2fe] mb-10'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 mx-4 mt-14 mb-10'>
 
         {filtrarPelicula().map(peli => (
 

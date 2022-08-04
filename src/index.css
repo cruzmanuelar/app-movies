@@ -3,5 +3,13 @@
 @tailwind utilities;
 
 body{
-    background-color: #a1d7fb;
+    background-color: #ffffff;
+}
+
+nav a.active{
+    background-color: #3f3f46;
+}
+
+nav a.principal.active{
+    background-color: #18181b;
 }
