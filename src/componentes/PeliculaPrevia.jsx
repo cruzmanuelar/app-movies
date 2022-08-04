@@ -6,7 +6,7 @@ const PeliculaPrevia = ({mov}) => {
     const navigate = useNavigate();
 
   return (
-        <div className='flex flex-col justify-center mx-3 my-2 md:hover:my-0 hover:my-2 relative hover:scale-105 duration-200 z-10' key={mov.id}>
+        <div className='flex flex-col justify-center mx-1 md:mx-3 my-2 md:hover:my-0 hover:my-2 relative hover:scale-105 duration-200 z-10' key={mov.id}>
 
             <div className='text-center rounded-t-sm bg-[#18181b] text-white' >
                 {mov.premiered.slice(0,4)}
