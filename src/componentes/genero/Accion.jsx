@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useBusqueda from '../../hooks/useBusqueda';
 import Encabezado from '../Encabezado';
 import PeliculaPrevia from '../PeliculaPrevia';
@@ -6,6 +6,7 @@ import PeliculaPrevia from '../PeliculaPrevia';
 const Accion = ({peliculas, genero}) => {
 
   const { nombreGenero, filtrarPelicula} = useBusqueda({peliculas, genero});
+
   return (
     <div className='h-100'>
       

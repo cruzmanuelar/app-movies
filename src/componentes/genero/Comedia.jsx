@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import useBusqueda from '../../hooks/useBusqueda';
 import Encabezado from '../Encabezado';
 import PeliculaPrevia from '../PeliculaPrevia';

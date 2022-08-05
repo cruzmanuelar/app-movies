@@ -4,12 +4,15 @@ import { AiFillStar, AiFillCalendar } from 'react-icons/ai';
 import { BsCircleFill } from 'react-icons/bs';
 import { GiUsaFlag } from 'react-icons/gi';
 import { MdAccessTimeFilled } from 'react-icons/md';
+import Sugeridas from './Sugeridas';
 
 const Pelicula = () => {
 
-    const [pelicula, setPelicula] = useState()
+    const [pelicula, setPelicula] = useState();
+
 
     const { id } = useParams();
+
 
     const getPelicula = async () => {
         
@@ -26,7 +29,6 @@ const Pelicula = () => {
 
     return (
         <div className='py-3 w-full flex justify-center'>
-
 
             {pelicula?
                 <div className='w-1/1 md:w-4/5 bg-[#18181b] mx-2 rounded-md text-white'>
@@ -45,7 +47,7 @@ const Pelicula = () => {
                                     <AiFillStar className='inline-block' size={20} color='yellow'/>{' '} {pelicula.rating.average}/10
                                 </div>
                                 <p className='text-justify my-2'>
-                                    <strong>Resume: </strong>{pelicula.summary.replaceAll('<b>','').replaceAll('</b>','').replaceAll('</p>','').replaceAll('<i>','').replaceAll('</i>','').replaceAll('<p>','')}
+                                    <strong>Resume: </strong>{pelicula.summary.replaceAll('<b>','').replaceAll('</b>','').replaceAll('</p>','').replaceAll('<i>','').replaceAll('</i>','').replaceAll('<p>','').replaceAll('<br />','')}
                                     
                                 </p>
 
@@ -58,7 +60,7 @@ const Pelicula = () => {
                                     
                                 </div>
                                 
-                                <p className='select-none my-1'>Language: {pelicula.language == 'English'
+                                <p className='select-none my-1'>Language: {pelicula.language === 'English'
                                     ?<GiUsaFlag className='inline-block' color='red'/>
                                     :
                                     <BsCircleFill  color='red' className='bg-[white] p-1 rounded-sm inline-block'/>
@@ -70,12 +72,10 @@ const Pelicula = () => {
                         
                     </div>:<p>Nada</p>}
 
-            <div className='hidden md:flex md:w-1/5 justify-center'>
-                <h3 className=''>Sugeridas</h3>
+            <div className='hidden md:flex flex-col mx-2 md:w-1/5 '>
+                <h1 className='text-center font-semibold'>Otros títulos:</h1>
+                <Sugeridas/>
             </div>
-            {/* <div className='hidden md:flex md:w-1/5'>
-                Las sugeridas
-            </div> */}
         </div>
     )
 }

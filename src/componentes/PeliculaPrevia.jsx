@@ -23,7 +23,7 @@ const PeliculaPrevia = ({mov}) => {
 
                 <div className="flex justify-center items-center absolute left-0 bottom-0 top-0 right-0 opacity-0 hover:opacity-100 duration-300">
 
-                    <button className='bg-[#18181b] border-2 border-white p-2 opacity-100 rounded-md text-white w-1/2' onClick={() => navigate(`/movie/${mov.id}`)}>VER</button>
+                    <button className='bg-[#52525b] border-2 border-white p-2 opacity-100 rounded-md text-white w-1/2' onClick={() => navigate(`/movie/${mov.id}`)}>VER</button>
                         
                 </div>
             </div>
