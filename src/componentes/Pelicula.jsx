@@ -5,11 +5,11 @@ import { BsCircleFill } from 'react-icons/bs';
 import { GiUsaFlag } from 'react-icons/gi';
 import { MdAccessTimeFilled } from 'react-icons/md';
 import Sugeridas from './Sugeridas';
+import LoadingSpin from "react-loading-spin";
 
 const Pelicula = () => {
 
     const [pelicula, setPelicula] = useState();
-
 
     const { id } = useParams();
 
@@ -28,7 +28,7 @@ const Pelicula = () => {
     },[id])
 
     return (
-        <div className='py-3 w-full flex justify-center'>
+        <div className='py-3 w-full flex items-center justify-center'>
 
             {pelicula?
                 <div className='w-1/1 md:w-9/12 h-full bg-[#18181b] mx-2 rounded-md text-white'>
@@ -70,9 +70,13 @@ const Pelicula = () => {
                             </div>
                         </div>
                         
-                    </div>:<div className='w-1/1 md:w-9/12 h-full mx-2'>a</div>}
+                    </div>
+                    :
+                    <div className='w-1/1 md:w-9/12 h-full mx-2 flex justify-center items-center'>
+                        <LoadingSpin primaryColor="black" width="8px"/>
+                    </div>}
 
-            <div className='hidden md:flex flex-wrap mx-1 md:w-3/12 '>
+            <div className='hidden md:flex flex-wrap mx-1 md:w-3/12'>
                     <Sugeridas/>
             </div>
         </div>
