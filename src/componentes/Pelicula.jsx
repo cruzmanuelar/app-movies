@@ -37,7 +37,7 @@ const Pelicula = () => {
 
                             <h2 className='text-center font-semibold text-3xl my-2 md:text-left md:hidden'>{pelicula.name}</h2>
                             
-                            <img className='w-1/1 sm:w-1/2 md:w-1/3 rounded-md' src={pelicula.image.original} alt={pelicula.name}/>
+                            <img className='w-1/1 sm:w-1/1 md:w-1/3 rounded-md' src={pelicula.image.original} alt={pelicula.name}/>
                         
                             <div className='flex flex-col p-3'>
 
@@ -70,12 +70,10 @@ const Pelicula = () => {
                             </div>
                         </div>
                         
-                    </div>:<div className='w-1/1 md:w-9/12 h-full mx-2'></div>}
+                    </div>:<div className='w-1/1 md:w-9/12 h-full mx-2'>a</div>}
 
-            <div className='hidden md:flex mx-1 md:w-3/12 '>
-                <div className='flex flex-wrap'>
+            <div className='hidden md:flex flex-wrap mx-1 md:w-3/12 '>
                     <Sugeridas/>
-                </div>
             </div>
         </div>
     )
