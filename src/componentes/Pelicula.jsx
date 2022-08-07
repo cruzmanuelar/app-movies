@@ -25,13 +25,13 @@ const Pelicula = () => {
 
         getPelicula();
 
-    },[])
+    },[id])
 
     return (
         <div className='py-3 w-full flex justify-center'>
 
             {pelicula?
-                <div className='w-1/1 md:w-4/5 bg-[#18181b] mx-2 rounded-md text-white'>
+                <div className='w-1/1 md:w-9/12 h-full bg-[#18181b] mx-2 rounded-md text-white'>
 
                         <div className='flex flex-col md:flex-row p-2 my-auto'>
 
@@ -70,11 +70,12 @@ const Pelicula = () => {
                             </div>
                         </div>
                         
-                    </div>:<p>Nada</p>}
+                    </div>:<div className='w-1/1 md:w-9/12 h-full mx-2'></div>}
 
-            <div className='hidden md:flex flex-col mx-2 md:w-1/5 '>
-                <h1 className='text-center font-semibold'>Otros títulos:</h1>
-                <Sugeridas/>
+            <div className='hidden md:flex mx-1 md:w-3/12 '>
+                <div className='flex flex-wrap'>
+                    <Sugeridas/>
+                </div>
             </div>
         </div>
     )

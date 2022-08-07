@@ -35,12 +35,12 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="terror" element={<Terror peliculas={peliculas} genero='Horror'/>} />
-        <Route path="drama" element={<Drama peliculas={peliculas} genero='Drama'/>} />
-        <Route path="accion" element={<Accion peliculas={peliculas} genero='Action' />} />
-        <Route path="comedia" element={<Comedia peliculas={peliculas} genero='Comedy' />} />
-        <Route path="romance" element={<Romance peliculas={peliculas} genero='Romance'/> } />
-        <Route path="movie/:id" element={<Pelicula/>} />
+        <Route path="/terror" element={<Terror peliculas={peliculas} genero='Horror'/>} />
+        <Route path="/drama" element={<Drama peliculas={peliculas} genero='Drama'/>} />
+        <Route path="/accion" element={<Accion peliculas={peliculas} genero='Action' />} />
+        <Route path="/comedia" element={<Comedia peliculas={peliculas} genero='Comedy' />} />
+        <Route path="/romance" element={<Romance peliculas={peliculas} genero='Romance'/> } />
+        <Route path="/movie/:id" element={<Pelicula/>} />
       </Routes>
 
       {/* <Footer/> */}
