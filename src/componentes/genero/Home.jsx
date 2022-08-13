@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Home = () => {
+const Home = ({peliculas}) => {
   return (
-    <div>Home</div>
+    <div className='h-100'>
+      <p>Home</p>
+    </div>
   )
 }
 

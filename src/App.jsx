@@ -34,7 +34,7 @@ function App() {
     <div>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home peliculas={peliculas} />} />
         <Route path="/terror" element={<Terror peliculas={peliculas} genero='Horror'/>} />
         <Route path="/drama" element={<Drama peliculas={peliculas} genero='Drama'/>} />
         <Route path="/accion" element={<Accion peliculas={peliculas} genero='Action' />} />
